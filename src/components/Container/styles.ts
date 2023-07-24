@@ -1,10 +1,14 @@
 import styled from "styled-components";
 
+
 export const ContainerMain = styled.main`
         display: flex;
         align-items: center;
         cursor: default;
         justify-content: center;
+
+     /* Efeito de fade-in */
+
 `
 
 export const ContainerCards = styled.div`
@@ -12,6 +16,13 @@ display: flex;
 align-items: flex-start;
 justify-content: center;
 margin-top: 5rem;
+@media (max-width: 768px) {
+    align-items: center;
+
+    img{
+        display: none;
+    }
+  }
 `
 export const ContainerItens = styled.div`
 display: flex;
@@ -25,12 +36,27 @@ div h1{
     font-family: 'DM Sans';
 font-style: normal;
 font-weight: 500;
-font-size: 88px;
+font-size: 5.5rem;
 line-height: 110%;
 margin-right: auto;
 
-
 }
+
+@media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    
+    div h1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 4rem;
+        margin-top: 2rem;
+    }
+  }
 `
 
 export const PMain = styled.div`
@@ -144,6 +170,7 @@ transition: 0.2S ease-in;
 cursor: pointer;
 
 color: white;
+
 &:hover {
     
     
@@ -165,6 +192,14 @@ color: white;
         }
     }
    
+   
+    @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
 `
 
 

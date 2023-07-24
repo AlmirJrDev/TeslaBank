@@ -1,14 +1,35 @@
 import { Container, DivGroup, GroupDivUpper, HeaderBlog } from "./style";
 import {  ArrowRight } from "@phosphor-icons/react";
 
+import React, { useEffect, useState, useRef } from 'react';
+
 import Blog01 from "../../assets/blog01.svg"
 import Blog02 from "../../assets/blog02.svg"
 import Blog03 from "../../assets/blog03.svg"
 
 
 export function Blog(){
+  const [isVisible, setIsVisible] = useState(false);
+  const ContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const elementTop = ContainerRef.current?.getBoundingClientRect().top ?? 0;
+      const offset = window.innerHeight * 0.8; // Ajuste este valor para controlar quando o fade-in deve ocorrer
+
+      if (elementTop < offset) {
+        setIsVisible(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return(
-    <Container>
+    <Container ref={ContainerRef} isVisible={isVisible}>
       <HeaderBlog><h2>Blog</h2><h6>Todas as postagens <ArrowRight size={23} weight="bold" /></h6></HeaderBlog>
       <GroupDivUpper>
         <DivGroup>

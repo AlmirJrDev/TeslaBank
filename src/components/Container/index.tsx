@@ -1,5 +1,6 @@
 import { ButtonContainer, ContainerCards, ContainerItens, ContainerMain, PMain, SpanList, SpanList01, SpanMain } from "./styles";
 
+import React, { useState, useEffect } from 'react';
 import Cards from '../../assets/card.svg'
 import LogoApple from '../../assets/logoapple.svg'
 import LogoAppStore from '../../assets/logoappstore.svg'
@@ -7,8 +8,16 @@ import LogoAppStore from '../../assets/logoappstore.svg'
 import { Check, ArrowRight   } from "@phosphor-icons/react";
 
 export function Container() {
+
+    const [showContent, setShowContent] = useState(false);
+
+    useEffect(() => {
+      setTimeout(() => {
+        setShowContent(true);
+      }, 100);
+    }, []); 
     return (
-        <ContainerMain>
+        <ContainerMain style={{ opacity: showContent ? '1' : '0', transition: 'opacity 1s ease-in-out' }}>
             <ContainerItens>
                 <div>
                   <h1> TeslaBank 

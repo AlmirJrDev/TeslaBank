@@ -1,9 +1,16 @@
 import styled from "styled-components";
+interface ContainerProps {
+  isVisible: boolean;
+}
 
-export const DivCenter = styled.div`
+export const DivCenter = styled.div<ContainerProps>`
 display: flex;
 align-items: center;
 justify-content: center;
+
+opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
+  transition: opacity 1s ease-in-out;
+
 
 text-align: center;
 

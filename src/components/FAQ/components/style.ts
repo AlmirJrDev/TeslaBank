@@ -2,7 +2,14 @@ import styled, { keyframes } from "styled-components";
 import * as Accordion from '@radix-ui/react-accordion';
 import { DeviceMobileCamera } from "@phosphor-icons/react";
 
-export const Container = styled.div`
+interface ContainerProps {
+  isVisible: boolean;
+}
+
+export const Container = styled.div<ContainerProps>`
+  opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
+  transition: opacity 1s ease-in-out;
+  
 max-width: 1216px;
 margin: 0 auto;
 margin-top: 5rem;
@@ -75,7 +82,6 @@ align-items: center;
 justify-content: center;
 margin-bottom: 2rem;
 margin-top: 2rem;
-animation: var{transitionAnimation);
 
 
 `

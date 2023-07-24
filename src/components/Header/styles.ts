@@ -1,24 +1,33 @@
 import styled from "styled-components";
 
+
 export const HeaderContainer = styled.header`
-display: flex;
-cursor: default;
-justify-content: space-around;
-align-items: center;
-margin-top: 2rem;
-font-family: Inter;
-font-weight: 500;
-font-size: 1rem;
+ /* Estilos comuns do header */
+ display: flex;
+  cursor: default;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2rem;
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 1rem;
 
-
-div{
+  div {
     display: flex;
     justify-content: space-around;
     gap: 1rem;
-}
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
+ 
 `
 
+
 export const ButtonHeader = styled.button`
+
 border: none;
 background: transparent;
 color: ${(props) => props.theme["$brand-color-red"]};
@@ -32,6 +41,9 @@ cursor: pointer;
    color: black;
   }
 
+  @media (max-width: 768px) {
+    display: none;
+  }
 `
 
 
@@ -54,5 +66,8 @@ transition: 0.2s ease-in;
     border-radius: 20px;
     background-color: #A7162A;
    
+  }
+  @media (max-width: 768px) {
+    display: none;
   }
 `

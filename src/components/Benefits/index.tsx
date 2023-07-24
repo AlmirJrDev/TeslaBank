@@ -1,16 +1,38 @@
+import React, { useEffect, useState, useRef } from 'react';
+
 import  CreditCard  from "../../assets/credit-card.svg"
 import ShoppingCar from "../../assets/shoppingcar.svg"
 import Clock from "../../assets/clock.svg"
 import Shield from "../../assets/shield.svg"
 import Percent from "../../assets/percent.svg"
 import Gift from "../../assets/gift.svg"
-import { DivGroup, GroupDivUpper, TitleBenefits } from "./styles"
+
+import { Container, DivGroup, GroupDivUpper, TitleBenefits } from "./styles"
 import { X } from "@phosphor-icons/react"
-import { Container } from "../Depoiments/styles"
+
+
 
 export function Benefits() {
+  const [isVisible, setIsVisible] = useState(false);
+  const ContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const elementTop = ContainerRef.current?.getBoundingClientRect().top ?? 0;
+      const offset = window.innerHeight * 0.8; // Ajuste este valor para controlar quando o fade-in deve ocorrer
+
+      if (elementTop < offset) {
+        setIsVisible(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return(
-    <Container>
+    <Container ref={ContainerRef} isVisible={isVisible}>
       <TitleBenefits>
       <h6>#INOVAÇÃO</h6>
       <h2>Quais são as vantagens <br />

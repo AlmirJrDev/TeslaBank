@@ -1,11 +1,19 @@
 import styled from "styled-components";
 
-export const ArticleMain = styled.article`
+interface ArticleMainProps {
+  isVisible: boolean;
+}
+
+export const ArticleMain = styled.article<ArticleMainProps>`
  cursor: default;
 display: flex;
 justify-content: center;
 align-items: center;
 margin-top: 18.75rem;
+
+    /* Efeito de fade-in */
+    opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
+  transition: opacity 1s ease-in-out;
 
 `
 export const TitleApp = styled.h1`

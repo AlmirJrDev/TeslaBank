@@ -1,9 +1,27 @@
-
+import React, { useEffect, useState, useRef } from 'react';
 import { Container, DivGroup, DivTitle, GroupDivUpper } from "./styles";
 
 export function Depoiments() {
+  const [isVisible, setIsVisible] = useState(false);
+  const ContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const elementTop = ContainerRef.current?.getBoundingClientRect().top ?? 0;
+      const offset = window.innerHeight * 0.8; // Ajuste este valor para controlar quando o fade-in deve ocorrer
+
+      if (elementTop < offset) {
+        setIsVisible(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
-    <Container>
+    <Container ref={ContainerRef} isVisible={isVisible}>
       <DivTitle>
         <h6>#DEPOIMENTOS</h6>
           <h2>TeslaBank fora das telinhas: 

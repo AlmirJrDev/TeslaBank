@@ -1,5 +1,19 @@
 import styled from "styled-components";
 
+interface ContainerProps {
+  isVisible: boolean;
+}
+
+
+export const Container = styled.div<ContainerProps>`
+max-width: 1216px;
+margin: 0 auto;
+
+opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
+  transition: opacity 1s ease-in-out;
+
+`
+
 export const TitleBenefits = styled.div`
 margin-left: 2rem;
 

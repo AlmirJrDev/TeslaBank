@@ -1,10 +1,16 @@
 import styled from "styled-components";
-export const Container = styled.div`
+interface ContainerProps {
+  isVisible: boolean;
+}
+export const Container = styled.div<ContainerProps>`
  cursor: default;
 max-width: 1216px;
 display: flex;
 align-items: center;
 justify-content: center;
+
+opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
+  transition: opacity 1s ease-in-out;
 
 margin: 0 auto;
 margin-top: 20.188rem;

@@ -1,9 +1,15 @@
 import styled from "styled-components";
 
-
-export const Container = styled.div`
+interface ContainerProps {
+  isVisible: boolean;
+}
+export const Container = styled.div<ContainerProps>`
 max-width: 1216px;
 margin: 0 auto;
+
+ /* Efeito de fade-in */
+ opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
+  transition: opacity 1s ease-in-out;
 `
 
 export const HeaderBlog = styled.div`

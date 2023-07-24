@@ -1,4 +1,6 @@
 import App from '../../assets/app.svg'
+import React, { useEffect, useState, useRef } from 'react';
+import { scroller } from 'react-scroll';
 
 import Dollar from '../../assets/dollar.svg'
 import Smile from '../../assets/smile.svg'
@@ -7,8 +9,27 @@ import Smartfone from '../../assets/smartfone.svg'
 import { ArticleMain, ArticleMid, DivQuality, ParagraphQuality, SectionQuality, SubtitleApp, SubtitleQuality, TitleApp } from './styles'
 
 export function AppView() {
+    const [isVisible, setIsVisible] = useState(false);
+    const ArticleMainRef = useRef<HTMLElement>(null);
+  
+    useEffect(() => {
+      const handleScroll = () => {
+        const elementTop = ArticleMainRef.current?.getBoundingClientRect().top ?? 0;
+        const offset = window.innerHeight * 0.8; // Ajuste este valor para controlar quando o fade-in deve ocorrer
+  
+        if (elementTop < offset) {
+          setIsVisible(true);
+        }
+      };
+  
+      window.addEventListener('scroll', handleScroll);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
+  
     return(
-        <ArticleMain>
+        <ArticleMain ref={ArticleMainRef} isVisible={isVisible}>
             <div>
             <img src={App} alt="" />
             </div>

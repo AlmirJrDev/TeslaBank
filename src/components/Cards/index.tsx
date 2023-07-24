@@ -1,12 +1,31 @@
 import { DivCenter } from "./styles";
-
+import React, { useEffect, useState, useRef } from 'react';
 import Crd from "../../assets/cards.svg"
 
 export function Cards() {
+  const [isVisible, setIsVisible] = useState(false);
+  const ContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const elementTop = ContainerRef.current?.getBoundingClientRect().top ?? 0;
+      const offset = window.innerHeight * 0.8; // Ajuste este valor para controlar quando o fade-in deve ocorrer
+
+      if (elementTop < offset) {
+        setIsVisible(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return(
-    <DivCenter>
+    <DivCenter ref={ContainerRef} isVisible={isVisible}>
       <div>
-      <h6>#DEPOIMENTOS</h6>
+      <h6>#UTILIDADE</h6>
           <h2>Cartão perfeito
             <br /> 
           <h2>para suas necessidades. </h2>
