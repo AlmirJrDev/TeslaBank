@@ -55,6 +55,10 @@ margin-right: auto;
         text-align: center;
         font-size: 4rem;
         margin-top: 2rem;
+        @media (max-width: 768px) {
+            margin-top: 4rem;
+    margin-bottom: 5rem;
+  }
     }
   }
 `
@@ -65,7 +69,11 @@ display: flex;
 align-items: start;
 justify-content: start;
 margin-top: 2.5rem;
+@media (max-width: 768px) {
+    display: none;
 
+  
+  }
 margin-right: auto;
 
  p{
@@ -88,7 +96,11 @@ align-items: center;
 justify-content: center;
 margin-right: auto;
 margin-top: 2rem;
- 
+@media (max-width: 768px) {
+    display: none;
+
+  
+  }
 `
 export const SpanList = styled.div`
 
@@ -148,7 +160,11 @@ export const ButtonContainer = styled.div`
     margin-right: auto;
 
     gap: 2.5rem;
-   
+    @media (max-width: 768px) {
+
+
+  
+  }
 
     button{
         display: flex;
@@ -160,6 +176,8 @@ export const ButtonContainer = styled.div`
         border-radius: 4px;
         width: 274px;
     height: 60px;
+    
+    
 
 font-family: 'Inter';
 font-style: normal;
@@ -199,6 +217,9 @@ color: white;
     justify-content: center;
     margin: 0 auto;
     margin-top: 2rem;
+    img{
+        display: none;
+    }
   }
 `
 
