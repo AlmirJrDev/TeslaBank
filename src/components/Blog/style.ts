@@ -10,6 +10,9 @@ margin: 0 auto;
  /* Efeito de fade-in */
  opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
   transition: opacity 1s ease-in-out;
+  @media (max-width: 768px) {
+   display: none;
+}
 `
 
 export const HeaderBlog = styled.div`

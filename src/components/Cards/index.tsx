@@ -30,7 +30,7 @@ export function Cards() {
             <br /> 
           <h2>para suas necessidades. </h2>
           </h2>
-          <p>Encontre o cartão perfeito para suas necessidades financeiras. Seja para <br /> viagens ou compras do dia a dia, temos uma opção que se adapta a você.</p>
+          <p>Encontre o cartão perfeito para suas necessidades financeiras. Seja para  viagens ou compras do dia a dia, temos uma opção que se adapta a você.</p>
           <img src={Crd} alt="" />
           <div>
             <button>Abrir uma Conta</button>

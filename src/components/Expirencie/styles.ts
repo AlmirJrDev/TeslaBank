@@ -47,6 +47,17 @@ font-weight: 500;
 font-size: 24px;
 margin-bottom: 3.875rem;
 
+} @media (max-width: 768px) {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+   h2{
+    font-size: 50px;
+    margin-left: 1rem;
+   }
+   p{
+    margin-left: 1rem;
+    font-size: 20px;
+   }
 }
 
 `
@@ -65,12 +76,20 @@ border-radius: 80px;
 &:hover{
     background: #A7162A;
 }
+@media (max-width: 768px) {
+   display: none;
+}
 `
 
 export const DivButton = styled.div`
 display: flex;
 flex-direction: row;
-
+@media (max-width: 768px) {
+  align-items: center;
+  justify-content: center ;
+  
+   flex-direction: column;
+}
 `
 export const DivButtonText = styled.div`
 display: flex;
@@ -115,5 +134,10 @@ justify-content: center;
   margin-right: 2.5rem;
   &:hover span{
   color: #ED2B2A;
+}
+@media (max-width: 768px) {
+  margin: 0 auto;
+   margin-bottom: 2rem;
+
 }
 `

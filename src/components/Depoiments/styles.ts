@@ -43,6 +43,8 @@ line-height: 110%;
 
 
 @media (max-width: 768px) {
+  margin-bottom: 2rem;
+  margin-top: 4rem;
       display: flex;
       flex-direction: column;
 

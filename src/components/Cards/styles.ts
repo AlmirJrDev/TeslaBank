@@ -95,5 +95,10 @@ letter-spacing: -0.03em;
 color: #1A191E;
 
 text-decoration: none;
+
+}
+
+@media (max-width: 768px) {
+   display: none;
 }
 `

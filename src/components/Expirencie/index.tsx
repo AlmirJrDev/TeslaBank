@@ -27,7 +27,7 @@ export function Expirence() {
 
     <Container ref={ContainerRef} isVisible={isVisible}>
       <div>
-        <h2>Uma nova experiência  <br />
+        <h2>Uma nova experiência 
           em <span>serviços financeiros.</span>  </h2>
           <p>Nossa abordagem inovadora e personalizada oferece uma <br />experiência única para atender às suas necessidades.</p>
         <DivButton>
