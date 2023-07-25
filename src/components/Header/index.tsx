@@ -1,5 +1,6 @@
+import { List } from '@phosphor-icons/react';
 import Logo from '../../assets/logo.svg';
-import { ButtonHeader, ButtonHeaderAccount, HeaderContainer } from './styles';
+import { ButtonAccordion, ButtonHeader, ButtonHeaderAccount, DivAncor, HeaderContainer } from './styles';
 
 import React, { useState, useEffect } from 'react';
 export function Header() {
@@ -17,19 +18,22 @@ export function Header() {
       <div>
         <img src={Logo} alt="" />
       </div>
-      <div>
+      <DivAncor>
         <p>Benefícios</p>
         <p>Conta digital</p>
         <p>Suporte</p>
         <p>Blog</p>
-      </div>
+      </DivAncor>
 
       <div>
         <ButtonHeader>Entrar</ButtonHeader>
         <ButtonHeaderAccount>Abrir conta</ButtonHeaderAccount>
+        <ButtonAccordion><List size={30} color='#000' weight="regular"/><div>
+
+          </div></ButtonAccordion>
       </div>
 
-      <div id="topElement" />
+      
     </HeaderContainer>
   );
 }

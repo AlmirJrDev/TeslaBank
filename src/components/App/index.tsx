@@ -6,7 +6,7 @@ import Dollar from '../../assets/dollar.svg'
 import Smile from '../../assets/smile.svg'
 import Smartfone from '../../assets/smartfone.svg'
 
-import { ArticleMain, ArticleMid, DivQuality, ParagraphQuality, SectionQuality, SubtitleApp, SubtitleQuality, TitleApp } from './styles'
+import { ArticleMain, ArticleMid, DivQuality, ImgApp, ParagraphQuality, SectionQuality, SubtitleApp, SubtitleQuality, TitleApp } from './styles'
 
 export function AppView() {
     const [isVisible, setIsVisible] = useState(false);
@@ -30,9 +30,9 @@ export function AppView() {
   
     return(
         <ArticleMain ref={ArticleMainRef} isVisible={isVisible}>
-            <div>
+            <ImgApp>
             <img src={App} alt="" />
-            </div>
+            </ImgApp>
             <ArticleMid>
                 <div><TitleApp>Abra sua conta gratuita!</TitleApp></div>
                 <div><SubtitleApp> Envie e receba dinheiro de forma mais prática e rápida. Faça Pix,<br /> TEDs e transferências para todos os bancos sem pagar nada.</SubtitleApp></div>

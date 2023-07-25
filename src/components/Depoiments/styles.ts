@@ -15,7 +15,7 @@ margin-top: 18.75rem;
 h6{
   font-family: 'DM Sans';
 font-style: normal;
-font-weight: 700;
+font-weight: bold;
 font-size: 20px;
 line-height: 26px;
 cursor: default;
@@ -30,6 +30,7 @@ font-weight: 500;
 font-size: 56px;
 line-height: 110%;
 cursor: default;
+}
 
 span{
   cursor: default;
@@ -39,7 +40,22 @@ font-weight: 300;
 font-size: 56px;
 line-height: 110%;
 }
-}
+
+
+@media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+
+      margin-left: 2rem;
+      width: 80%;
+          h2{
+            font-size: 30px;
+          }
+
+          span{
+            font-size: 30px;
+          }
+  }
 `
 
 export const GroupDivUpper = styled.div`
@@ -48,6 +64,14 @@ export const GroupDivUpper = styled.div`
     align-items: center;
     justify-content: space-between;
     gap: 24px;
+    
+    @media (max-width: 768px) {
+          margin: 0 auto;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+         
+  }
 ` 
 
 export const DivGroup = styled.div`
@@ -88,5 +112,14 @@ line-height: 160%;
   border-left: 6px solid #e51d37;
   cursor: default;
         }
-
+        
+        @media (max-width: 768px) {
+          margin: 0 auto;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 0 auto;
+          
+          width: 100%;
+  }
 `

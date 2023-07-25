@@ -12,22 +12,30 @@ export const HeaderContainer = styled.header`
   font-weight: 500;
   font-size: 1rem;
 
-  div {
-    display: flex;
-    justify-content: space-around;
-    gap: 1rem;
-  }
+
 
   @media (max-width: 768px) {
-    flex-direction: column;
+    
   }
 
  
 `
 
+export const DivAncor = styled.div`
+    
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    
+  @media (max-width: 768px) {
+    display: none;
+  }
+  
+`
+
 
 export const ButtonHeader = styled.button`
-
+margin-right: 1rem;
 border: none;
 background: transparent;
 color: ${(props) => props.theme["$brand-color-red"]};
@@ -68,6 +76,21 @@ transition: 0.2s ease-in;
    
   }
   @media (max-width: 768px) {
+    display: none;
+  }
+`
+export const ButtonAccordion = styled.button`
+  border: none;
+background: transparent;
+color: #fff;
+border-radius: 4px;
+width: 3rem;
+height: 3rem;
+text-align: center;
+display: flex;
+align-items: center;
+justify-content: center;
+@media (min-width: 768px) {
     display: none;
   }
 `

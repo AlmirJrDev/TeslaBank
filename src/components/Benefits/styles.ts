@@ -57,6 +57,15 @@ export const GroupDivUpper = styled.div`
     align-items: center;
     justify-content: space-between;
     gap: 24px;
+    
+    @media (max-width: 768px) {
+          margin: 0 auto;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 0;
+          
+  }
 ` 
 
 export const DivGroup = styled.div`
@@ -105,4 +114,14 @@ text-transform: uppercase;
             transition: 0.4s all ease;
             width: 38px;
         }
+        
+        @media (max-width: 768px) {
+          margin: 0 auto;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 0 auto;
+          
+          width: 100%;
+  }
 `
