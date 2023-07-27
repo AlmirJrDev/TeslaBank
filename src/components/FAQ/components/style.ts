@@ -13,6 +13,7 @@ export const Container = styled.div<ContainerProps>`
 max-width: 1216px;
 margin: 0 auto;
 margin-top: 5rem;
+margin-bottom: 3rem;
 `
 export const HeaderFaq = styled.div`
 
@@ -22,8 +23,11 @@ export const AccordionTest = styled(Accordion.Trigger)`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  transition: 2s ease-in-out;
+  cursor: pointer;
   background: transparent;
+  div {
+    margin-right: 1rem;
+  }
 `
 
 export const Subtitle = styled.h6`
@@ -81,23 +85,13 @@ export const Content = styled(Accordion.Content)`
 display: flex;
 align-items: center;
 justify-content: center;
+text-align: center;
 margin-bottom: 2rem;
 margin-top: 2rem;
 
 
 `
-const transitionAnimation = keyframes`
-  0% {
-    width: 200px;
-    height: 200px;
-    background-color: blue;
-  }
-  100% {
-    width: 400px;
-    height: 400px;
-    background-color: red;
-  }
-  `
+
 
 export const DivGroup = styled.div`
 
@@ -111,4 +105,9 @@ export const DivGroup = styled.div`
 `
 export const Icon = styled(DeviceMobileCamera)`
 margin-right: 2rem;
+`
+export const Footer = styled.footer`
+margin-top: 2rem;
+width: 100%;
+height: 50px;
 `

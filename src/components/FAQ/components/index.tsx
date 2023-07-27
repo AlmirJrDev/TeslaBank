@@ -1,8 +1,9 @@
 import * as Accordion from '@radix-ui/react-accordion';
 
 import React, { useEffect, useState, useRef } from 'react';
-import { AccordionDiv, AccordionTest, Container, Content, DivGroup, HeaderFaq, Icon, Paragraph, Subtitle, Title } from './style';
+import { AccordionDiv, AccordionTest, Container, Content, DivGroup, Footer, HeaderFaq, Icon, Paragraph, Subtitle, Title } from './style';
 import { CaretDown, } from '@phosphor-icons/react';
+
 export function FaqComponent() {
   const [isVisible, setIsVisible] = useState(false);
   const ContainerRef = useRef<HTMLDivElement>(null);
@@ -38,30 +39,31 @@ export function FaqComponent() {
       </HeaderFaq>
       <AccordionDiv>
       <DivGroup>
-      <Accordion.Root className="AccordionRoot" type="single" collapsible>  
+      <Accordion.Root className="AccordionRoot" type="single" defaultValue="item-1" collapsible>  
     <Accordion.Item className="AccordionItem" value="item-1">
-      <AccordionTest   className='AccordionTrigger'><div><Icon size={35} color="#EB3850"/>Como posso abrir uma conta bancária?</div> <CaretDown size={35} color="#EB3850"/></AccordionTest>
+      <AccordionTest><div><Icon size={35} color="#EB3850"/></div>Como posso abrir uma conta bancária?<CaretDown size={35} color="#EB3850"/></AccordionTest>
       <Content> Este site é apenas uma demonstração. Não oferece funcionalidades bancárias reais.</Content>
     </Accordion.Item>
 
     <Accordion.Item className="AccordionItem" value="item-2">
-      <AccordionTest> <div><Icon size={35} color="#EB3850"/> Qual é o meu saldo atual?</div><CaretDown size={35} color="#EB3850"/></AccordionTest>
+      <AccordionTest> <div><Icon size={35} color="#EB3850"/> </div> Qual é o meu saldo atual?<CaretDown size={35} color="#EB3850"/></AccordionTest>
       <Content>
       Este site é apenas uma demonstração. Não oferece funcionalidades bancárias reais.
       </Content>
     </Accordion.Item>
 
     <Accordion.Item className="AccordionItem" value="item-3">
-      <AccordionTest><div><Icon size={35} color="#EB3850"/>Como faço para transferir dinheiro para outra conta?</div><CaretDown size={35} color="#EB3850"/></AccordionTest>
-      <Content className="AccordionContent">
-        <div className="AccordionContentText">
+      <AccordionTest><div><Icon size={35} color="#EB3850"/> </div>Como faço para transferir dinheiro para outra conta?<CaretDown size={35} color="#EB3850"/></AccordionTest>
+      <Content>
+    
         Este site é apenas uma demonstração. Não oferece funcionalidades bancárias reais.
-        </div>
+   
       </Content>
     </Accordion.Item>
   </Accordion.Root>
   </DivGroup>
   </AccordionDiv>
+  <Footer/>
     </Container>
   )
 }
