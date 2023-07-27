@@ -1,4 +1,4 @@
-import { DivCenter } from "./styles";
+import { DivButton, DivCenter, DivContent } from "./styles";
 import React, { useEffect, useState, useRef } from 'react';
 import Crd from "../../assets/cards.svg"
 
@@ -24,7 +24,7 @@ export function Cards() {
 
   return(
     <DivCenter ref={ContainerRef} isVisible={isVisible}>
-      <div>
+      <DivContent>
       <h6>#UTILIDADE</h6>
           <h2>Cartão perfeito
             <br /> 
@@ -32,11 +32,12 @@ export function Cards() {
           </h2>
           <p>Encontre o cartão perfeito para suas necessidades financeiras. Seja para  viagens ou compras do dia a dia, temos uma opção que se adapta a você.</p>
           <img src={Crd} alt="" />
-          <div>
+     
+      </DivContent>
+      <DivButton>
             <button>Abrir uma Conta</button>
             <a href="">Comparar Cartões</a>
-          </div>
-      </div>
+          </DivButton>
     </DivCenter>
   )
 }

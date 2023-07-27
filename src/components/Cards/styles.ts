@@ -7,6 +7,7 @@ export const DivCenter = styled.div<ContainerProps>`
 display: flex;
 align-items: center;
 justify-content: center;
+flex-direction: column;
 
 opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
   transition: opacity 1s ease-in-out;
@@ -36,6 +37,8 @@ cursor: default;
 
 
 p{
+ 
+  width: 50%;
   margin-top: 2rem;
   margin-bottom: 3rem;
   font-family: 'Inter';
@@ -47,9 +50,7 @@ line-height: 160%;
 
 }
 
-div{
-  margin-top: 5rem;
-}
+
 button{
   &:hover {
     
@@ -101,4 +102,22 @@ text-decoration: none;
 @media (max-width: 768px) {
    display: none;
 }
+
+`
+export const DivButton = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 2rem;
+`
+
+export const DivContent = styled.div`
+
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
 `

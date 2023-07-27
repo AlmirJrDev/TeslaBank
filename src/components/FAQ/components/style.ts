@@ -23,6 +23,7 @@ export const AccordionTest = styled(Accordion.Trigger)`
   justify-content: space-between;
   width: 100%;
   transition: 2s ease-in-out;
+  background: transparent;
 `
 
 export const Subtitle = styled.h6`

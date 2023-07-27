@@ -66,9 +66,9 @@ export const Logo = styled.div`
 display: flex;
 align-items: center;
 justify-content: center;
-width: 384px;
+width: 504px;
 height: 378px;
-margin-left: 9.125rem;
+
 
 transition: 0.3s ease-in-out;
 background: #EB3850;
