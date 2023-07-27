@@ -25,9 +25,13 @@ export const AccordionTest = styled(Accordion.Trigger)`
   width: 100%;
   cursor: pointer;
   background: transparent;
-  div {
-    margin-right: 1rem;
-  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
 `
 
 export const Subtitle = styled.h6`
@@ -80,6 +84,15 @@ justify-content: space-between;
  
 
 }
+@media (max-width: 768px) {
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
 `
 export const Content = styled(Accordion.Content)`
 display: flex;
@@ -105,6 +118,12 @@ export const DivGroup = styled.div`
 `
 export const Icon = styled(DeviceMobileCamera)`
 margin-right: 2rem;
+
+@media (max-width: 768px) {
+display: none;
+
+}
+
 `
 export const Footer = styled.footer`
 margin-top: 2rem;
