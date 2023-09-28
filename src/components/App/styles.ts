@@ -4,7 +4,7 @@ interface ArticleMainProps {
   isVisible: boolean;
 }
 
-export const ArticleMain = styled.article<ArticleMainProps>`
+export const ArticleMain = styled.section<ArticleMainProps>`
  cursor: default;
 display: flex;
 justify-content: center;

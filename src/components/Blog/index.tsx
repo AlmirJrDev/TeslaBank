@@ -29,7 +29,7 @@ export function Blog(){
   }, []);
 
   return(
-    <Container ref={ContainerRef} isVisible={isVisible}>
+    <Container  ref={ContainerRef} isVisible={isVisible}>
       <HeaderBlog><h2>Blog</h2><h6>Todas as postagens <ArrowRight size={23} weight="bold" /></h6></HeaderBlog>
       <GroupDivUpper>
         <DivGroup>

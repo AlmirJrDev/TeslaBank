@@ -32,8 +32,8 @@ export function Benefits() {
     };
   }, []);
   return(
-    <Container ref={ContainerRef} isVisible={isVisible}>
-      <TitleBenefits>
+    <Container  ref={ContainerRef} isVisible={isVisible}>
+      <TitleBenefits >
       <h6>#INOVAÇÃO</h6>
       <h2>Quais são as vantagens <br />
       de usar <span>TeslaBank</span>?</h2>

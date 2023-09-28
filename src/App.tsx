@@ -10,19 +10,16 @@ import { Cards } from "./components/Cards";
 import { Expirence } from "./components/Expirencie";
 import { Blog } from "./components/Blog";
 import { FaqComponent } from "./components/FAQ/components";
+import { Main } from "./components/Main/main";
 
 export function App(){
   return(
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyle/>
+      
+ 
       <Header/>
-      <Container/>
-      <AppView />
-      <Benefits/>
-      <Depoiments/>
-      <Cards/>
-      <Expirence/>
-      <Blog />
+      <Main/>
       <FaqComponent/>
     </ThemeProvider>
   )

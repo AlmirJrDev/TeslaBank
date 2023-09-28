@@ -5,7 +5,7 @@ interface ContainerProps {
 }
 
 
-export const Container = styled.div<ContainerProps>`
+export const Container = styled.section<ContainerProps>`
 max-width: 1216px;
 margin: 0 auto;
 

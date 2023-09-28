@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 
-export const ContainerMain = styled.main`
+export const ContainerMain = styled.section`
         display: flex;
         align-items: center;
         cursor: default;
@@ -16,6 +16,16 @@ display: flex;
 align-items: flex-start;
 justify-content: center;
 margin-top: 5rem;
+@media (max-width: 1115px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+      width: calc(100% - 10px);
+    }
+ 
+  }
+
 @media (max-width: 768px) {
     align-items: center;
 
@@ -42,6 +52,7 @@ margin-right: auto;
 
 }
 
+
 @media (max-width: 768px) {
     display: flex;
     align-items: center;
@@ -55,6 +66,14 @@ margin-right: auto;
         text-align: center;
         font-size: 4rem;
         margin-top: 2rem;
+        
+@media (max-width: 1115px) {
+    div h1{
+      font-size: calc(100% - 10px);
+    }
+    
+ 
+  }
         @media (max-width: 768px) {
             margin-top: 4rem;
     margin-bottom: 5rem;
@@ -65,10 +84,21 @@ margin-right: auto;
 
 export const PMain = styled.div`
 
+
 display: flex;
 align-items: start;
 justify-content: start;
 margin-top: 2.5rem;
+
+@media (max-width: 1115px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+      width: calc(100% - 10px);
+    
+ 
+  }
 @media (max-width: 768px) {
     display: none;
 

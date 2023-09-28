@@ -3,7 +3,7 @@ import styled from "styled-components";
 interface ContainerProps {
   isVisible: boolean;
 }
-export const Container = styled.div<ContainerProps>`
+export const Container = styled.section<ContainerProps>`
 max-width: 1216px;
 margin: 0 auto;
 opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};

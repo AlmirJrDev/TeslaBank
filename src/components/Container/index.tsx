@@ -17,7 +17,7 @@ export function Container() {
       }, 100);
     }, []); 
     return (
-        <ContainerMain style={{ opacity: showContent ? '1' : '0', transition: 'opacity 1s ease-in-out' }}>
+        <ContainerMain id="accont" style={{ opacity: showContent ? '1' : '0', transition: 'opacity 1s ease-in-out' }}>
             <ContainerItens>
                 <div>
                   <h1> TeslaBank 

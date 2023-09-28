@@ -6,7 +6,7 @@ interface ContainerProps {
   isVisible: boolean;
 }
 
-export const Container = styled.div<ContainerProps>`
+export const Container = styled.footer<ContainerProps>`
   opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
   transition: opacity 1s ease-in-out;
   
@@ -22,6 +22,7 @@ export const AccordionTest = styled(Accordion.Trigger)`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  text-align: center;
   width: 100%;
   cursor: pointer;
   background: transparent;
@@ -101,6 +102,7 @@ justify-content: center;
 text-align: center;
 margin-bottom: 2rem;
 margin-top: 2rem;
+color:  ${(props) => props.theme["$dark-20"]};
 
 
 `
@@ -125,7 +127,7 @@ display: none;
 }
 
 `
-export const Footer = styled.footer`
+export const DownFooter = styled.div`
 margin-top: 2rem;
 width: 100%;
 height: 50px;

@@ -45,7 +45,7 @@ export function Expirence() {
         </DivButtonBackground>
         </DivButton>
       </div>
-      <Logo>
+      <Logo id="blog">
       <img src={GreatLogo} alt="" />
       </Logo>
     </Container>

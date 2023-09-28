@@ -40,11 +40,11 @@ export function AppView() {
                 <SectionQuality>
                 <DivQuality><img src={Dollar} alt="" /><div><SubtitleQuality>Seu dinheiro rendendo mais</SubtitleQuality><ParagraphQuality>Rendem mais que a poupança e você resgata quando quiser.</ParagraphQuality></div></DivQuality>
                 <DivQuality><img src={Smartfone} alt="" /><div><SubtitleQuality>Conta digital 100% grátis</SubtitleQuality><ParagraphQuality>Transferências, boletos de depósito e outros serviços gratuitos.</ParagraphQuality></div></DivQuality>
-                <DivQuality><img src={Smile} alt="" /><div><SubtitleQuality>Cartão sem anuidade</SubtitleQuality><ParagraphQuality>Conta digital com cartão de crédito sem anuidade e sem complicação.</ParagraphQuality></div></DivQuality>
+                <DivQuality><img src={Smile} alt="" /><div  id="beneficios"  ><SubtitleQuality>Cartão sem anuidade</SubtitleQuality><ParagraphQuality>Conta digital com cartão de crédito sem anuidade e sem complicação.</ParagraphQuality></div></DivQuality>
                 </SectionQuality>
-            </ArticleMid>
+            </ArticleMid >
 
-        
+
         </ArticleMain>
     )
 }

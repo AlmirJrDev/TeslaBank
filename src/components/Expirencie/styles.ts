@@ -2,7 +2,7 @@ import styled from "styled-components";
 interface ContainerProps {
   isVisible: boolean;
 }
-export const Container = styled.div<ContainerProps>`
+export const Container = styled.section<ContainerProps>`
  cursor: default;
 max-width: 1216px;
 display: flex;

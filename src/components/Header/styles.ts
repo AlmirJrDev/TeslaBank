@@ -12,13 +12,15 @@ export const HeaderContainer = styled.header`
   font-weight: 500;
   font-size: 1rem;
 
-
-
-  @media (max-width: 768px) {
+  a{color: #000;
+    text-decoration: none;}
     
+    
+    @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-
- 
 `
 
 export const DivAncor = styled.div`
@@ -51,6 +53,7 @@ cursor: pointer;
 
   @media (max-width: 768px) {
     display: none;
+    
   }
 `
 

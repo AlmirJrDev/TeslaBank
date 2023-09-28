@@ -3,7 +3,7 @@ interface ContainerProps {
   isVisible: boolean;
 }
 
-export const DivCenter = styled.div<ContainerProps>`
+export const DivCenter = styled.section<ContainerProps>`
 display: flex;
 align-items: center;
 justify-content: center;

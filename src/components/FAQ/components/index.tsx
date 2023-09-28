@@ -1,7 +1,7 @@
 import * as Accordion from '@radix-ui/react-accordion';
 
 import React, { useEffect, useState, useRef } from 'react';
-import { AccordionDiv, AccordionTest, Container, Content, DivGroup, Footer, HeaderFaq, Icon, Paragraph, Subtitle, Title } from './style';
+import { AccordionDiv, AccordionTest, Container, Content, DivGroup, DownFooter, HeaderFaq, Icon, Paragraph, Subtitle, Title } from './style';
 import { CaretDown, } from '@phosphor-icons/react';
 
 export function FaqComponent() {
@@ -25,10 +25,9 @@ export function FaqComponent() {
   }, []);
 
   return(
-    <Container ref={ContainerRef} isVisible={isVisible}>
+    <Container id='faq' ref={ContainerRef} isVisible={isVisible}>
       <HeaderFaq>
         <Subtitle>
-        #ajuda
         </Subtitle>
         <Title>
         Ficou alguma dúvida?
@@ -42,13 +41,13 @@ export function FaqComponent() {
       <Accordion.Root className="AccordionRoot" type="single" defaultValue="item-1" collapsible>  
     <Accordion.Item className="AccordionItem" value="item-1">
       <AccordionTest><div><Icon size={35} color="#EB3850"/></div>Como posso abrir uma conta bancária?<CaretDown size={35} color="#EB3850"/></AccordionTest>
-      <Content> Este site é apenas uma demonstração. Não oferece funcionalidades bancárias reais.</Content>
+      <Content> Este site é apenas uma demonstração. </Content>
     </Accordion.Item>
 
     <Accordion.Item className="AccordionItem" value="item-2">
       <AccordionTest> <div><Icon size={35} color="#EB3850"/> </div> Qual é o meu saldo atual?<CaretDown size={35} color="#EB3850"/></AccordionTest>
       <Content>
-      Este site é apenas uma demonstração. Não oferece funcionalidades bancárias reais.
+      Este site é apenas uma demonstração. 
       </Content>
     </Accordion.Item>
 
@@ -56,14 +55,14 @@ export function FaqComponent() {
       <AccordionTest><div><Icon size={35} color="#EB3850"/> </div>Como faço para transferir dinheiro para outra conta?<CaretDown size={35} color="#EB3850"/></AccordionTest>
       <Content>
     
-        Este site é apenas uma demonstração. Não oferece funcionalidades bancárias reais.
+        Este site é apenas uma demonstração. 
    
       </Content>
     </Accordion.Item>
   </Accordion.Root>
   </DivGroup>
   </AccordionDiv>
-  <Footer/>
+  <DownFooter/>
     </Container>
   )
 }
